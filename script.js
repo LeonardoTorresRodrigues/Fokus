@@ -11,6 +11,8 @@ const musica = new Audio('/sons/luna-rise-part-one.mp3');
 const audioTempoFinalizado = new Audio('/sons/beep.mp3');
 const audioPause = new Audio('/sons/pause.mp3');
 const audioPlay = new Audio('/sons/play.wav');
+const iniciarOuPausarBt = document.querySelector('#start-pause span');
+const iniciarOuPausarImg = document.querySelector('#start-pause img');
 
 let tempoDecorridoEmSegundos = 5;
 let intervaloId = null;
@@ -88,9 +90,13 @@ function iniciarOuPuasar() {
     }
     audioPlay.play();
     intervaloId = setInterval(contagemRegressiva, 1000);
+    iniciarOuPausarBt.textContent = "Pausar";
+    iniciarOuPausarImg.setAttribute('src', '/imagens/pause.png')
 };
 
 function zerar() {
     clearInterval(intervaloId);
+    iniciarOuPausarBt.textContent = "Começar";
+    iniciarOuPausarImg.setAttribute('src', '/imagens/play_arrow.png');
     intervaloId = null;
 }
