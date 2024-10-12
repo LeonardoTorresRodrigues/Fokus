@@ -12,7 +12,7 @@ const audioTempoFinalizado = new Audio('/sons/beep.mp3');
 const audioPause = new Audio('/sons/pause.mp3');
 const audioPlay = new Audio('/sons/play.wav');
 const iniciarOuPausarBt = document.querySelector('#start-pause span');
-const iniciarOuPausarImg = document.querySelector('#start-pause img');
+const iniciarOuPausarImg = document.querySelector('.app__card-primary-butto-icon');
 const tempoNaTela = document.querySelector('#timer');
 
 let tempoDecorridoEmSegundos = 1500;
